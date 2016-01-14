@@ -3,7 +3,7 @@ require 'pry'
 class User_Login
 	attr_reader :user, :password, :logged
 	def initialize(user, password)
-		@users = {:user => "lee", :password => "1234"}
+		@users =[user1 = {:user => "lee", :password => "1234"}]
 		@user = user
 		@password = password
 		@logged = logged
@@ -11,7 +11,7 @@ class User_Login
 	end
 
 	def validate
-		if @user == @users[:user] && @password == @users[:password]
+		if @user == @users[0][:user] && @password == @users[0][:password]
 			@logged = true
 		end
 	end
