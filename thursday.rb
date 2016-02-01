@@ -41,10 +41,7 @@ user = gets.chomp
 puts "password please"
 password = gets.chomp
 
-user_input = {:user => user, :password => password}
-
-
-user1 = User_Login.new(user_input[:user], user_input[:password])
+user1 = User_Login.new(user, password)
 
 Word_Count.new(user1)
 
